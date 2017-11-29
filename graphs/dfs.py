@@ -1,6 +1,7 @@
 
 # Mostapha Rammo
 # 2017.11.29
+# My implementations of depth-first search
 
 ###############################
 ### RECURSIVE IMPLEMENTATION###
