@@ -11,12 +11,8 @@
 # Here I also try starting from every node in the graph to cover disconnected nodes, this can also
 # be done in my other method.  I'm showing both ways for sake of example and need.
 
-## checking for cycles part is disbled, uncomment below to enable
 def dfs_visit2(graph, startNode, parent, visited):
-	#visited.append(startNode)	## cycle detection
 	for adj in graph[startNode]:
-		#if adj in visited:		## cycle detection
-			#print("cycle")		## cycle detection
 		if (adj not in parent):
 			parent[adj] = startNode
 			dfs_visit2(graph, adj, parent, visited)
@@ -24,10 +20,6 @@ def dfs_visit2(graph, startNode, parent, visited):
 def dfs_r2(graph):
 	parent = {}	## Parent should have all nodes that have been globally visited
 			# at the end of this function
-
-	visited = [] 		## This is used when looking for a cycle,
-				# we need to keep track of visited nodes from each outer
-				# start node.
 
 	for node in graph:
 		if (node not in parent):
